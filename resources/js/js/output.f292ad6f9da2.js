@@ -1,0 +1,1 @@
+$(document).ready(function(){$('.region-info').hide();$('a[href*=#region-info]').children("#minus-btn").hide();$('a[href*=#region-info]').click(function(e){e.preventDefault();$(this).children("#plus-btn").toggle();$(this).children("#minus-btn").toggle();$(this).parent().next().next().slideToggle("fast");});});;

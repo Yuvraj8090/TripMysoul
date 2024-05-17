@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlantController;
+use App\Http\Controllers\DestinationDetailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// In web.php or routes file
 Route::get('/', function () {
     return view('welcome');
+})->name('home');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
+Route::get('/destination/{name}', [DestinationDetailController::class, 'showByName'])->name('destination.show');
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+

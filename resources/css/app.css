@@ -1,0 +1,198 @@
+@import url('./css/output.b14b0fd3e73d.css');
+@import url('./css/output.b1fc495f28b2.css');
+@import url('./css/output.0c2cf24d6776.css');
+@import url('./css/css/1348c2c95e64653a.css');
+@import url('./css/css/43a93ae8ac7a027e.css');
+@import url('./css/css/ea6667572a93df78.css');
+@import url('./css/output.27ca764f06f2.css');
+
+select {
+  width: 220px;
+  border: 1px solid #ffff !important;
+  background-color: transparent !important;
+  color: #ffff !important;
+  border-radius: 10px !important;
+}
+footer.styles_footer__EFoWO ul.styles_links__Qprg4 a{
+  color: #ffffff !important;
+}
+footer.styles_footer__EFoWO p.styles_links_title__Xi82e {
+  color: #ffffff !important;
+}
+
+.UScontent,
+.UKcontent,
+.EUcontent,
+CAcontent,
+AUScontent,
+NZcontent {
+    display: none;
+}
+
+
+.localization-australia .noAUScontent,
+.localization-new-zealand .noNZcontent {
+    display: none;
+}
+
+.localization-canada .CAcontent,
+.localization-australia .AUScontent,
+.localization-new-zealand .NZcontent,
+.localization-united-states .UScontent,
+.localization-united-kingdom .UKcontent,
+.localization-russia .EUcontent,
+.localization-germany .EUcontent,
+.localization-france .EUcontent,
+.localization-italy .EUcontent,
+.localization-spain .EUcontent,
+.localization-ukraine .EUcontent,
+.localization-poland .EUcontent,
+.localization-romania .EUcontent,
+.localization-netherlands .EUcontent,
+.localization-belgium .EUcontent,
+.localization-czech-republic .EUcontent,
+.localization-greece .EUcontent,
+.localization-portugal .EUcontent,
+.localization-sweden .EUcontent,
+.localization-hungary .EUcontent,
+.localization-belarus .EUcontent,
+.localization-austria .EUcontent,
+.localization-serbia .EUcontent,
+.localization-switzerland .EUcontent,
+.localization-bulgaria .EUcontent,
+.localization-denmark .EUcontent,
+.localization-finland .EUcontent,
+.localization-slovakia .EUcontent,
+.localization-norway .EUcontent,
+.localization-ireland .EUcontent,
+.localization-croatia .EUcontent,
+.localization-moldova .EUcontent,
+.localization-bosnia-and-herzegovina .EUcontent,
+.localization-ualbania .EUcontent,
+.localization-lithuania .EUcontent,
+.localization-north-macedonia .EUcontent,
+.localization-slovenia .EUcontent,
+.localization-latvia .EUcontent,
+.localization-estonia .EUcontent,
+.localization-montenegro .EUcontent,
+.localization-luxembourg .EUcontent,
+.localization-malta .EUcontent,
+.localization-iceland .EUcontent,
+.localization-andorra .EUcontent,
+.localization-monaco .EUcontent,
+.localization-liechtenstein .EUcontent,
+.localization-san-marino .EUcontent {
+    display: block;
+}
+
+
+  .tabset .tab-panel {
+    display: none;
+  }
+  .tag-discount{
+    font-size: 9px;
+    font-weight: 100;
+    margin-left: 4px !important;
+    
+  }
+  .sale-tag{
+    width: 113.67px !important;
+    height: 18px !important;
+    border-radius: 30px !important;
+    font-size: 9px !important;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    top: 289px;
+    left: 206px;
+  }
+  .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+  .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+  .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+  .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+  .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+  }
+  .card-imgs{
+    width: 327.59px !important;
+    height: 256px !important;
+  }
+  .card-desti{
+    height: 431.8px !important;
+    border-radius: 16px !important;
+width: 327.59px !important;
+margin: 0 10px !important;
+padding: 0px !important;
+
+  }
+  /*
+   Styling
+  */
+.tag-discount-p{
+    width: 104.88px !important;
+    height: 22px !important;
+}
+  .tabset > label {
+    position: relative;
+    display: inline-block;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .tabset > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    background: #ffffff;
+  }
+  
+  input:focus-visible + label {
+    outline: 2px solid rgba(0,102,204,1);
+    border-radius: 3px;
+  }
+  
+  .tabset > label:hover,
+  .tabset > input:focus + label,
+  .tabset > input:checked + label {
+    color: #06c;
+  }
+  
+  .tabset > label:hover::after,
+  .tabset > input:focus + label::after,
+  .tabset > input:checked + label::after {
+    background: #06c;
+  }
+/*   
+  .tabset > input:checked + label {
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+  } */
+  
+  .tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  /*
+   Demo purposes only
+  */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+
+  
+  .tabset {
+    max-width: 85em;
+  }

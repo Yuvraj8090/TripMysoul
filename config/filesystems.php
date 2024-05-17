@@ -32,17 +32,17 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('.'),
             'throw' => false,
         ],
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'root' => public_path('storage'), // Set the root path to the public storage directory
+            'url' => env('APP_URL').'/storage', // Specify the URL to access files in the public storage directory
             'visibility' => 'public',
-            'throw' => false,
         ],
+        
 
         's3' => [
             'driver' => 's3',
@@ -70,7 +70,8 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        public_path('storage') => storage_path('.'),
     ],
 
 ];
+
