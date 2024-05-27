@@ -21,4 +21,15 @@ public function destinationDetails()
     }
    
 
+    
+    protected $fillable = [
+        'name', 'Video', 'gallery', // Add other attributes as needed
+    ];
+    
+    public function getGalleryAttribute($value)
+    {
+        return json_decode($value, true);
+    }
+
+    
 }

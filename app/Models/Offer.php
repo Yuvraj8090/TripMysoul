@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Offer extends Model
 {
-    protected $fillable = ['id', 'name', 'amount']; // Define fillable fields
+    protected $fillable = ['id', 'name', 'amout']; // Define fillable fields
 
     public function destinationDetails()
     {

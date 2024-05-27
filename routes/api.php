@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\LeadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/leads', [LeadController::class, 'store']);
+
+Route::post('/bookings', [BookingController::class, 'store']);
+Route::put('/bookings/{id}', [BookingController::class, 'update']);
+Route::patch('/bookings/{id}', [BookingController::class, 'update']);

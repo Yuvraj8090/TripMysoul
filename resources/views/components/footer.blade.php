@@ -1,14 +1,14 @@
+<footer class="styles_footer__EFoWO"
+    style="background-image: url('{{ Voyager::image(setting('site.footer-img')) }}'); background-size: cover;">
 
-<footer class="styles_footer__EFoWO" style="
-background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
     <div class="styles_container__58Mr5">
         <div class="styles_col-4__UpNem col-tablet-2 col-desktop-2">
             <div class="styles_links_tablet__YzBVB">
                 <p class="styles_links_title__Xi82e">Trip My Soul</p>
                 <ul class="styles_links__Qprg4">
-                    <li><a data-testid="link-component" href="about-us/index.html">About us</a></li>
-                    <li><a data-testid="link-component" href="about-us/core-values/index.html">Values</a></li>
-                    <li><a data-testid="link-component" href="careers/index.html">Careers</a></li>
+                    <li><a data-testid="link-component" href="{{ route('about') }}">About us</a></li>
+                    <li><a data-testid="link-component" href="{{ route('about') }}">Values</a></li>
+                    <li><a data-testid="link-component" href="{{ route('about') }}">Careers</a></li>
 
                     <li><a href="media-centre/index.html">Media centre</a></li>
 
@@ -21,11 +21,10 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                         aria-expanded="false" aria-controls="collapse-:R11sm:">
                         <div class="styles_accordion_title__AWtJE">Trip My Soul</div>
                         <div class="styles_accordion_collapse_icon__cyx6r">
-                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;"
-                                role="presentation">
+                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;" role="presentation">
                                 <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
                                 </svg>
                             </div>
                         </div>
@@ -34,9 +33,9 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                         aria-labelledby="heading-:R11sm:">
                         <div data-testid="accordion_body" class="styles_accordion_body__4vvJA">
                             <ul class="styles_links__Qprg4">
-                                <li><a data-testid="link-component" href="about-us/index.html">About us</a></li>
-                                <li><a data-testid="link-component"
-                                        href="about-us/core-values/index.html">Values</a></li>
+                                <li><a data-testid="link-component" href="about">About us</a></li>
+                                <li><a data-testid="link-component" href="about-us/core-values/index.html">Values</a>
+                                </li>
                                 <li><a data-testid="link-component" href="careers/index.html">Careers</a></li>
 
                                 <li><a data-testid="link-component" href="media-centre/index.html">Media
@@ -67,11 +66,10 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                         aria-expanded="false" aria-controls="collapse-:R12sm:">
                         <div class="styles_accordion_title__AWtJE">Support</div>
                         <div class="styles_accordion_collapse_icon__cyx6r">
-                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;"
-                                role="presentation">
+                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;" role="presentation">
                                 <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
                                 </svg>
                             </div>
                         </div>
@@ -101,8 +99,7 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                 <p class="styles_links_title__Xi82e">Community</p>
                 <ul class="styles_links__Qprg4">
                     <li><a data-testid="link-component" href="blog/index.html">Blog</a></li>
-                    <li><a data-testid="link-component"
-                            href="subscriptions/newsletters/index.html">Newsletter</a></li>
+                    <li><a data-testid="link-component" href="subscriptions/newsletters/index.html">Newsletter</a></li>
                     <li><a data-testid="link-component" href="brochure/index.html">Brochures</a></li>
                     <li><a data-testid="link-component" href="affiliate-program/index.html">Affiliate
                             program</a></li>
@@ -115,11 +112,10 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                         aria-expanded="false" aria-controls="collapse-:R13sm:">
                         <div class="styles_accordion_title__AWtJE">Community</div>
                         <div class="styles_accordion_collapse_icon__cyx6r">
-                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;"
-                                role="presentation">
+                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;" role="presentation">
                                 <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
                                 </svg>
                             </div>
                         </div>
@@ -133,8 +129,8 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                                         href="subscriptions/newsletters/index.html">Newsletter</a></li>
                                 <li><a data-testid="link-component" href="brochure/index.html">Brochures</a>
                                 </li>
-                                <li><a data-testid="link-component"
-                                        href="affiliate-program/index.html">Affiliate program</a></li>
+                                <li><a data-testid="link-component" href="affiliate-program/index.html">Affiliate
+                                        program</a></li>
                             </ul>
                         </div>
                     </div>
@@ -159,28 +155,15 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                         aria-expanded="false" aria-controls="collapse-:R14sm:">
                         <div class="styles_accordion_title__AWtJE">Travel Agents</div>
                         <div class="styles_accordion_collapse_icon__cyx6r">
-                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;"
-                                role="presentation">
+                            <div class="icon icon_chevronDown" style="width: 16px; height: 16px;" role="presentation">
                                 <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 6L8 10L12 6" stroke="#242239" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
                                 </svg>
                             </div>
                         </div>
                     </button>
-                    <div id="collapse-:R14sm:" class="styles_accordion_collapse__9YZG7" style="height: 0;"
-                        aria-labelledby="heading-:R14sm:">
-                        <div data-testid="accordion_body" class="styles_accordion_body__4vvJA">
-                            <ul class="styles_links__Qprg4">
-                                <li><a data-testid="link-component"
-                                        href="https://sherpa.tripmysoul.com/login/">Agent login</a></li>
-                                <li><a data-testid="link-component" href="agents/register/index.html">Agent
-                                        registration</a></li>
-                                <li><a data-testid="link-component" href="agents/search/index.html">Find an
-                                        agent</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -221,8 +204,7 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_1278_5584">
-                                        <rect width="18" height="19.5" fill="white"
-                                            transform="translate(15 15)"></rect>
+                                        <rect width="18" height="19.5" fill="white" transform="translate(15 15)"></rect>
                                     </clipPath>
                                 </defs>
                             </svg>
@@ -295,15 +277,6 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
         </div>
         <div class="styles_col-4__UpNem col-tablet-8 col-tablet-lg-3 col-desktop-5">
             <div class="styles_links_standards__FzVO3">
-
-
-
-
-
-
-
-
-
             </div>
         </div>
         <div class="styles_col-4__UpNem col-tablet-8 col-tablet-lg-6 col-desktop-7">
@@ -519,9 +492,6 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
                 </div>
             </div>
         </div>
-
-
-
         <div class="styles_divider__KzmyH styles_col-4__UpNem col-tablet-5 col-desktop-12"></div>
         <div class="styles_col-4__UpNem col-tablet-8 col-desktop-4">
             <div class="styles_copyright__WhwLF">
@@ -531,9 +501,9 @@ background-image: url('{{Voyager::image(setting('site.footer-img')) }}');">
         </div>
         <div class="styles_legal__hNG_p styles_col-4__UpNem col-tablet-8 col-desktop-8">
             <ul class="styles_legal__hNG_p">
-                <li><a data-testid="link-component" href="terms-conditions/index.html">Terms and Conditions</a>
+                <li><a data-testid="link-component" href="{{ route('terms-condition.index') }}">Terms and Conditions</a>
                 </li>
-                <li><a data-testid="link-component" href="terms-conditions/privacy/index.html">Privacy
+                <li><a data-testid="link-component" href="{{ route('privacy-policy.index') }}">Privacy
                         Policy</a></li>
                 <li><a data-testid="link-component" href="terms-conditions/cookie-policy/index.html">Manage
                         Cookies</a></li>

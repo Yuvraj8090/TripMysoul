@@ -446,145 +446,57 @@
 									 class="dy-widget-recos-scroller-15075832 recos-container slider ">
 									 @foreach($destinationdetails as $destinationdetail)
 									 <div class="tile-image-container dy-widget-tile-item-15075832" dy-rcom-slot-info="%7B%22context%22%3A%7B%22type%22%3A%22HOMEPAGE%22%2C%22lng%22%3A%22en%22%7D%2C%22fId%22%3A15686%2C%22wId%22%3A143655%2C%22fallback%22%3Atrue%2C%22slot%22%3A0%2C%22pId%22%3A%22EIRCHW%22%2C%22strId%22%3A9%7D">
-										@php
-										// Decode the JSON string to an array
-										$imageUrls = json_decode($destinationdetail->gallery);
-										@endphp
-										<div class="trip-images">
-										   @if (!empty($imageUrls))
-										   <div class="trip-image" style="background-image: url('{{ asset('storage/' . str_replace('\\', '/', $imageUrls[0])) }}');"></div>
-										   @endif
-										</div>
-										@if(!empty($destinationdetail->Offers_avialable))
-										@php
-										// Fetch offer details using offer ID
-										$offer = App\Models\Offer::find($destinationdetail->Offers_avialable);
-										@endphp
-										@if($offer)
-										<div class="dy-text">
-										   <div class="durations_start_end_city">{{ $destinationdetail->no_of_days }} DAY TOUR</div>
-										   <div class="dy-widget-tile-name-15075832">
-											  <p class="trip-title">{{ $destinationdetail->name_package }}</p>
-											  <p class="departure-date">Next departure May 21, 2024</p>
-										   </div>
-										   <div class="per_person">
-											  @php
-											  $discountedPrice = $destinationdetail->Price - $offer->amout;
-											  @endphp
-											  <span class="currency-symbol INR"></span>
-											  @if($discountedPrice)
-											  <span class="price_number">{{ $discountedPrice }}</span> per person
-											  @endif
-										   </div>
-										   <div class="cta_price_row">
-											  <a href="https://www.gadventures.com/trips/dalmatian-coast-travel-rome-to-corfu/EIRCHW/" class="destftbtn" target="_blank">
-												 <div class="cta-link">
-													<span class="eye-icon">View itinerary</span>
-												 </div>
-											  </a>
-										   </div>
-										</div>
-										@endif
-										@endif
+										 @php
+										 // Decode the JSON string to an array
+										 $imageUrls = json_decode($destinationdetail->gallery);
+										 @endphp
+										 <div class="trip-images">
+											 @if (!empty($imageUrls))
+											 <div class="trip-image" style="background-image: url('{{ asset('storage/' . str_replace('\\', '/', $imageUrls[0])) }}');"></div>
+											 @endif
+										 </div>
+									 
+										 @php
+										 // Fetch offer details using offer ID
+										 $offer = App\Models\Offer::find($destinationdetail->Offers_avialable);
+										 $discountedPrice = $destinationdetail->Price;
+									 
+										 if($offer) {
+											 $discountedPrice -= $offer->amout;
+										 }
+										 @endphp
+									 
+										 <div class="dy-text">
+											 <div class="durations_start_end_city">{{ $destinationdetail->no_of_days }} DAY TOUR</div>
+											 <div class="dy-widget-tile-name-15075832">
+												 <p class="trip-title">{{ $destinationdetail->name_package }}</p>
+												 <p class="departure-date">Next departure May 21, 2024</p>
+											 </div>
+									 
+											 @if($offer)
+											 <div class="per_person">
+												 <span class="currency-symbol INR"></span>
+												 <span class="price_number">{{ $discountedPrice }}</span> per person
+											 </div>
+											 
+											 @else
+											 <div class="per_person">
+												 <span class="currency-symbol INR"></span>
+												 <span class="price_number">{{ $destinationdetail->Price }}</span> per person
+											 </div>
+											 @endif
+											 <div class="cta_price_row">
+												<a href="{{ route('destination.show', ['name' => $destinationdetail->name_package]) }}" class="destftbtn" target="_blank">
+													<div class="cta-link">
+														<span class="eye-icon">View itinerary</span>
+													</div>
+												</a>
+											</div>
+											
+										 </div>
 									 </div>
 									 @endforeach
-									 <div class="tile-image-container dy-widget-tile-item-15075832"
-										dy-rcom-slot-info="%7B%22context%22%3A%7B%22type%22%3A%22HOMEPAGE%22%2C%22lng%22%3A%22en%22%7D%2C%22fId%22%3A15686%2C%22wId%22%3A143655%2C%22fallback%22%3Atrue%2C%22slot%22%3A2%2C%22pId%22%3A%22ELBI%22%2C%22strId%22%3A9%7D">
-										<div class="trip-image"
-										   style="background-image:url(https://media.gadventures.com/media-server/cache/8c/3b/8c3bdea81d33d2d5dc4c31f2b5ea3fdb.jpg)">
-										</div>
-										<div class="dy-text">
-										   <div class="durations_start_end_city"> 7 DAY
-											  TOUR 
-										   </div>
-										   <div class="dy-widget-tile-name-15075832">
-											  <p class="trip-title">Best of Iceland</p>
-											  <p class="departure-date"> Next departure
-												 Jun 02, 2024 
-											  </p>
-										   </div>
-										   <div class="per_person">
-											  <span class="currency-symbol USD"> </span>
-											  <span class="price_number"> 2324</span> per
-											  person
-										   </div>
-										   <div class="cta_price_row">
-											  <a href="https://www.gadventures.com/trips/best-of-iceland/ELBI/"
-												 class="destftbtn" target="_blank">
-												 <div class="cta-link">
-													<span class="eye-icon"> View
-													itinerary </span>
-												 </div>
-											  </a>
-										   </div>
-										</div>
-									 </div>
-									 <div class="tile-image-container dy-widget-tile-item-15075832"
-										dy-rcom-slot-info="%7B%22context%22%3A%7B%22type%22%3A%22HOMEPAGE%22%2C%22lng%22%3A%22en%22%7D%2C%22fId%22%3A15686%2C%22wId%22%3A143655%2C%22fallback%22%3Atrue%2C%22slot%22%3A3%2C%22pId%22%3A%22EIVNF%22%2C%22strId%22%3A9%7D">
-										<div class="trip-image"
-										   style="background-image:url(https://media.gadventures.com/media-server/cache/79/8b/798b59e88aa87f97c64cc15680ec9b49.jpg)">
-										</div>
-										<div class="dy-text">
-										   <div class="durations_start_end_city"> 8 DAY
-											  TOUR 
-										   </div>
-										   <div class="dy-widget-tile-name-15075832">
-											  <p class="trip-title">Italy Family Journey:
-												 Venice to Rome
-											  </p>
-											  <p class="departure-date"> Next departure
-												 Jul 07, 2024 
-											  </p>
-										   </div>
-										   <div class="per_person">
-											  <span class="currency-symbol USD"> </span>
-											  <span class="price_number"> 3144</span> per
-											  person
-										   </div>
-										   <div class="cta_price_row">
-											  <a href="https://www.gadventures.com/trips/italy-family-journey-venice-to-rome/EIVNF/"
-												 class="destftbtn" target="_blank">
-												 <div class="cta-link">
-													<span class="eye-icon"> View
-													itinerary </span>
-												 </div>
-											  </a>
-										   </div>
-										</div>
-									 </div>
-									 <div class="tile-image-container dy-widget-tile-item-15075832"
-										dy-rcom-slot-info="%7B%22context%22%3A%7B%22type%22%3A%22HOMEPAGE%22%2C%22lng%22%3A%22en%22%7D%2C%22fId%22%3A15686%2C%22wId%22%3A143655%2C%22fallback%22%3Atrue%2C%22slot%22%3A4%2C%22pId%22%3A%22ECDAHW%22%2C%22strId%22%3A9%7D">
-										<div class="trip-image"
-										   style="background-image:url(https://media.gadventures.com/media-server/cache/ed/01/ed015ebcc0151c1c7a173e433260e415.jpg)">
-										</div>
-										<div class="dy-text">
-										   <div class="durations_start_end_city"> 12 DAY
-											  TOUR 
-										   </div>
-										   <div class="dy-widget-tile-name-15075832">
-											  <p class="trip-title">Southern Europe:
-												 Croatia, Montenegro &amp; Ancient Greece
-											  </p>
-											  <p class="departure-date"> Next departure
-												 May 27, 2024 
-											  </p>
-										   </div>
-										   <div class="per_person">
-											  <span class="currency-symbol USD"> </span>
-											  <span class="price_number"> 1559</span> per
-											  person
-										   </div>
-										   <div class="cta_price_row">
-											  <a href="https://www.gadventures.com/trips/southern-europe-dubrovnik-to-athens/ECDAHW/"
-												 class="destftbtn" target="_blank">
-												 <div class="cta-link">
-													<span class="eye-icon"> View
-													itinerary </span>
-												 </div>
-											  </a>
-										   </div>
-										</div>
-									 </div>
+									
 								  </div>
 								  <div><a class="btn btn-large" id="cta-search"
 									 href="https://www.gadventures.com/search/?destinations=Adventures Travel &amp; Tours">View

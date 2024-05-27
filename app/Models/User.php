@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use TCG\Voyager\Models\User as VoyagerUser;
 
-class User extends \TCG\Voyager\Models\User
+class User extends VoyagerUser implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -21,6 +21,8 @@ class User extends \TCG\Voyager\Models\User
         'name',
         'email',
         'password',
+        'phone_number',
+        'avatar',  // Add this line
     ];
 
     /**
@@ -42,4 +44,11 @@ class User extends \TCG\Voyager\Models\User
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getProfilePhotoUrlAttribute()
+    {
+        return $this->avatar
+            ? asset('storage/'.$this->avatar)
+            : 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email))).'?s=200&d=mm&r=g';
+    }
 }

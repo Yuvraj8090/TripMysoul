@@ -3,10 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="http://127.0.0.1:8000/storage/settings/May2024/ltRrzHBzDzUYYzve9tCk.png"
         type="image/png">
+
+    <title>{{ config('app.name', 'Trip My Soul (TMS)') }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,18 +19,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>{{ config('app.name', 'Trip My Soul (TMS)') }}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <!-- Scripts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Vite for Laravel assets -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .hero-image-slide,
         .leadercontent,
@@ -176,14 +183,16 @@
             object-fit: cover;
             z-index: -1
         }
+
         video {
-    max-width: 100%;
-    width: auto\9;
-    height: auto;
-    vertical-align: middle;
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-}
+            max-width: 100%;
+            width: auto\9;
+            height: auto;
+            vertical-align: middle;
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+        }
+
         .hero-image-slide .image video {
             width: 100%;
             min-height: 505px;
@@ -1009,7 +1018,7 @@
         }
 
         .modal-body {
-            margin: 0 0 0 30px
+            margin: 0 0 0 0px
         }
 
         .geluxehpcontent {
@@ -1142,9 +1151,7 @@
                 width: 100%
             }
 
-            .modal.fade.in {
-                top: 10% !important
-            }
+
 
             .modal-body h4,
             .promo-intro h3 {
@@ -1402,55 +1409,59 @@
         <x-navigation-menu />
         <div id='c-inner'>
             <div id="content">
-                <div class='page-position section-navigation clearfix' data-position="section-navigation">
-                </div>
+                <div class='page-position section-navigation clearfix' data-position="section-navigation"></div>
                 {{ $slot }}
             </div>
         </div>
         <x-footer />
     </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Your custom scripts -->
     <script type="text/javascript">
         $(document).ready(function () {
-         
-             $('ul.tabs li').click(function () {
-         
-                 var tab_id = $(this).attr('data-tab');
-         
-                 $(this).siblings('ul.tabs li').removeClass('current');
-                 $(this).parents().siblings(".tab-section").children('.tab-content').removeClass('current');
-         
-                 $(this).addClass('current');
-                 $(this).parents().siblings(".tab-section").children("#" + tab_id).addClass('current');
-             });
-         
-         });
-         
-         
-         
-         DYO.smartObject("Homepage kedarnath tours", { target: "dy_Homepage_kedarnath_tours", inline: true });
-         
-         DYO.smartObject("Hompage Asia tours", { target: "dy_Hompage_Asia_tours", inline: true });
-         
-         DYO.smartObject("Homepage Africa tours", { target: "dy_Homepage_Africa_tours", inline: true });
-         
-         DYO.smartObject("Homepage Middle East tours", { target: "dy_Homepage_Middle_East_tours", inline: true });
-         
-         DYO.smartObject("Homepage Central America & The Caribbean", { target: "dy_Homepage_Central_America_&_The_Caribbean", inline: true });
-         
-         DYO.smartObject("Homepage South America tours", { target: "dy_Homepage_South_America_tours", inline: true });
-         
-         DYO.smartObject("Homepage north america tours", { target: "dy_Homepage_north_america_tours", inline: true });
-         
-         // DYO.smartObject("Homepage Antarctica tours", {target: "dy_Homepage_Antarctica_tours", inline: true});
-         
-         DYO.smartObject("Homepage Aus/NZ tours", { target: "dy_Homepage_Aus/NZ_tours", inline: true });
-         
-         
+            // Tabs functionality
+            $('ul.tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $(this).siblings('ul.tabs li').removeClass('current');
+                $(this).parents().siblings(".tab-section").children('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $(this).parents().siblings(".tab-section").children("#" + tab_id).addClass('current');
+            });
+
+            // Smart objects initialization
+            const smartObjects = [
+                "Homepage kedarnath tours",
+                "Hompage Asia tours",
+                "Homepage Africa tours",
+                "Homepage Middle East tours",
+                "Homepage Central America & The Caribbean",
+                "Homepage South America tours",
+                "Homepage north america tours",
+                // "Homepage Antarctica tours",
+                "Homepage Aus/NZ tours"
+            ];
+
+            smartObjects.forEach(function (obj) {
+                DYO.smartObject(obj, { target: "dy_" + obj.replace(/ /g, "_"), inline: true });
+            });
+        });
     </script>
+
     @livewireScripts
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-</body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 </html>
